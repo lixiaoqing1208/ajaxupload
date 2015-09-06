@@ -228,11 +228,11 @@ define(function (require) {
                     return;
                 }
 
-                // fixing Opera 9.64
+                // 修正 Opera 9.64
                 if (doc.body && doc.body.innerHTML == "false") {
-                    // In Opera 9.64 event was fired second time
-                    // when body.innerHTML changed from false
-                    // to server response approx. after 1 sec
+                    // 在 Opera 9.64 事件会触发两次
+                    // 当 body.innerHTML 从false变化时
+                    // 约1秒后服务器响应
                     return;
                 }
 
@@ -279,9 +279,7 @@ define(function (require) {
 
             this.getResponse(iframe, this.fileInfo.fileName);
             this.creatInput();
-
         }
-
     };
 
     return ajaxupload;
